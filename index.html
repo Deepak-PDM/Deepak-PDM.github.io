@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv=”Content-Security-Policy” content=”default-src ’self’; img-src *”>
+    <title>Deepak Yerramsetty</title>
+    <meta name="description" content="Ingresa para conocer mas acerca de mi experiencia como Desarrollador Backend Java">
+    <link rel="icon" href="https://em-content.zobj.net/thumbs/120/apple/354/technologist-light-skin-tone_1f9d1-1f3fb-200d-1f4bb.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#home" class="active">Start</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#stack">Technologies</a></li>
+            <li><a href="#studies">Acedamics</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <section id="home">
+            <div class="presentation">
+                <img style="border-radius: 75%;" class="picture" src="profile_pic.jpeg" alt="Imagen de perfil">
+                <div class="greeting">
+                    <h1>Deepak Yerramsetty</h1>
+                    <h2>Backend Developer</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-me">
+            <h3>🙋🏻‍♂️ About me</h3>
+            <p>I am an Electrical Engineer with a solid foundation in automation technologies, particularly in Twincat structured text, and have honed my skills in Python backend development. My technical expertise has provided me with a deep understanding of how systems and products work behind the scenes.</p>
+            <p>Currently, I am pursuing my master’s in Product Design and Management, where I am learning to bridge the gap between technology and user experience. My passion lies in transforming ideas into market-ready products that are both innovative and user-centric.</p>
+        </section>
+
+        <section id="experience">
+            <h3>💼 Experience</h3>
+
+            <div class="card exp">
+                <img src="tmeic.png" alt="TMEIC" class="exp-icon">
+                <div class="info">
+                    <h5> Python Backend Developer</h5>
+                    <h6>Hyderabad India | September 2022 - October 2023 </h6>
+                    <p>As an Employee of TMEIC, I was part of the ERS Project (Power plant Monitoring Dashboards). The tasks involved creating APIs for plant monitoring using Python, Django, and PostgreSQL.</p>
+                </div>
+            </div>  
+        </section>
+
+        <section id="projects">
+            <h3>⭐ Self-taught projects</h3>
+                <div class="card">
+                    <h5>REST API - "SMS Weather"</h5>
+                    <p>This API uses a SQLite database to store phone numbers and locations, querying APIs like "Geocoding" and "Weather" to send weather updates via SMS using Twilio's API.</p>
+                </div>
+        </section>
+
+        <section id="stack">
+            <h3>💻 Technologies</h3>
+            <h4>Languages</h4>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>HTML & CSS</li>
+                <li>C</li>
+                <li>MAT Lab</li>
+            </ul>
+            <h4>Frameworks</h4>
+            <ul>
+                <li>Backend: Django, DjangoRestFramework</li>
+                <li>Frontend: ReactJs (basic)</li>
+            </ul>
+            <h4>Data Bases</h4>
+            <ul>
+                <li>Relational: MySQL, PostgreSQL</li>
+                <li>No Relational: MongoDB</li>
+            </ul>
+        </section>
+
+        <section id="studies">
+            <h3>📚 Formal Education</h3>
+            <div class="card">
+                <a href="https://pdm.iiit.ac.in/" target="_blank"><p>M.Tech - Product Design and Management</p></a>
+                <p>August 2024 - May 2026</p>
+                <img src="iiit.jpeg" alt="Logo of IIITH" class="wide">
+            </div>
+            <div class="card">
+                <a href="https://www.andhrauniversity.edu.in/" target="_blank"><p>B.Tech - Electrical Engineering</p></a>
+                <p>August 2019 - May 2022</p>
+                <img src="AU.jpeg" alt="Logo of IIITH" class="wide">
+            </div>
+            <div class="card">
+                <p>Diploma - Electrical Engineering</p>
+                <p>August 2024 - May 2026</p>
+                <img src="Polytechnic.jpeg" alt="Logo of IIITH" class="wide">
+            </div>
+        </section>
+
+        <section id="contact">
+            <h3>💌 Contact me</h3>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/deepakyerramsetty/" target="_blank">linkedin</a></li>
+                <li><a href="https://github.com/deepak27176" target="_blank">GitHub</a></li>
+                <li><a href="mailto:deepakyerramsetti@gmail.com" target="_blank">Email</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>DEEPAK - portfolio 2024</footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 50) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
